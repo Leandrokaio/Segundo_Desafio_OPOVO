@@ -5,5 +5,151 @@
     --main-bg-form-color: #161613;
     --main-bg-color: #505045;
     --main-text-color: #f9f9e7;
-    --main-bg-color: #0b1d21;
+    --main-btn-color: #911440;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    color: var(--main-text-color);
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+body{
+    background-color: var(--main-bg-color);
+}
+
+.container{
+    background-color: var(--main-bg-form-color);
+    width: 800px;
+    margin: 10vh auto;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.title-form{
+    font-size: 2.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.names{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.first-name, .last-name{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+
+#first-name, #last-name{
+    padding: 1rem;
+    border-radius: 5px;
+    color: var(--main-bg-form-color);
+    font-size: 1.2rem;
+}
+
+.input-style{
+    padding: 1rem;
+    width: 100%;
+    color: var(--main-bg-form-color);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.label-style{
+    margin-bottom: .6rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.email-address{
+    display: flex;
+    flex-direction: column;
+}
+
+.query-types{
+    display: flex;
+    flex-direction: column;
+}
+
+.querys{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.query-one, .query-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    border: 1px solid #f9f9e7;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+#query-option-one, #query-option-two{
+    width: 18px;
+    height: 18px;
+}
+
+.textarea{
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    color: var(--main-bg-form-color);
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.confirm-terms{
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#confirm-term{
+    width: 20px;
+    height: 20px;
+}
+
+#term-confirmed{
+    font-size: 1.2rem;
+}
+
+.btn{
+    width: 100%;
+    color: var(--main-text-color);
+    background-color: var(--main-btn-color);
+    padding: 15px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
