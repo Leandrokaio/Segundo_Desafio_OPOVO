@@ -5,13 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Validação de Formulário</title>
-    <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/script.js" defer></script>
 </head>
 <body>
     
     <div class="container">
         <form action="#">
+            <h2 id="title-form">Contact Us</h3>
+            <div class="container-infos">
 
+                <div class="names">
+
+                    <div class="first-name">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name" required>
+                    </div>
+
+                    <div class="last-name">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" required>
+                    </div>
+
+                </div>
+
+                <div class="email-address">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="query-types">
+                    <label for="query">Query Type</label>
+
+                    <div class="querys">
+
+                        <div class="query-one">
+                            <input type="radio" name="query" id="query-option-one" required>
+                            <label for="query-option-one">General Enquiry</label>
+                        </div>
+
+                        <div class="query-two">
+                            <input type="radio" name="query" id="query-option-two" required>
+                            <label for="query-option-two">Support Request</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                    <div class="textarea">
+                        <label for="textarea">Message</label>
+                        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="confirm-terms">
+                        <input type="checkbox" name="confirm" id="confirm-term">
+                        <label for="confirm-term">I consent to being contacted by the team</label>
+                    </div>
+
+                    <button type="submit" class="btn">Submit</button>
+            </div>
         </form>
     </div>
 

@@ -1,2 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Variáveis de cor */
+:root{
+    --main-bg-form-color: #161613;
+    --main-bg-color: #505045;
+    --main-text-color: #f9f9e7;
+    --main-bg-color: #0b1d21;
+}
