@@ -29,6 +29,9 @@ body{
     margin: 10vh auto;
     padding: 2rem;
     border-radius: 10px;
+    box-shadow: 8px 6px 21px 1px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 8px 6px 21px 1px rgba(0,0,0,0.55);
+    -moz-box-shadow: 8px 6px 21px 1px rgba(0,0,0,0.55);
 }
 
 .title-form{
