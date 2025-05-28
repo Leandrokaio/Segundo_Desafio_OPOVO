@@ -2,10 +2,9 @@ const form = document.querySelector("#form");
 const firstNameInput = document.querySelector("#first-name");
 const lastNameInput = document.querySelector("#last-name");
 const emailInput = document.querySelector("#email");
-const queryTypeOne = document.querySelector("#query-option-one");
-const queryTypeTwo = document.querySelector("#query-option-two");
+const queryInput = document.querySelectorAll('input[type= radio]');
 const textareaInput = document.querySelector("#textarea");
-const confirmTermsInput = document.querySelector("#confirm-term");
+const confirmTermsInput = document.querySelectorAll('input[type= checkbox]');
 
 form.addEventListener("submit", (event) =>{
     event.preventDefault();
@@ -13,10 +12,7 @@ form.addEventListener("submit", (event) =>{
     const firstNameValue = firstNameInput.value;
     const lastNameValue = lastNameInput.value;
     const emailValue = emailInput.value;
-    const queryTypeOneValue = queryTypeOne.value;
-    const queryTypeTwoValue = queryTypeTwo.value;
     const textareaValue = textareaInput.value;
-    const confirmTermsValue = confirmTermsInput.value;
 
 
     // Verificar se o primeiro nome está vazio
@@ -31,15 +27,22 @@ form.addEventListener("submit", (event) =>{
     }
 
     // Verificar se o email está vazio
-    if(emailValue === ""){
-        alert("Por favor preencha com seu email");
+    if(emailValue === "" || !validarEmail(emailInput.value)){
+        alert("Por favor preencha com dados corretos seu email");
         return;
     }
 
     // Verificar se algum opção foi selecionada
 
-    if(queryTypeOneValue && queryTypeTwoValue === ""){
-        alert("Selecione uma das opções");
+    let selecionado = false;
+    queryInput.forEach(radio =>{
+        if(radio.checked){
+            selecionado = true;
+        }
+    });
+
+    if (!selecionado){
+        alert("Por favor, selecione uma opção")
         return;
     }
 
@@ -50,12 +53,26 @@ form.addEventListener("submit", (event) =>{
     }
 
     // Verificar se os termos foram aceitos
-    if(confirmTermsValue === false){
-        alert("Confirme os termos");
-        return;
-    }
-
-
+    
+    for (var i=0;i<confirmTermsInput.length;i++){ 
+        if (confirmTermsInput[i].checked == true){
+        }else{
+            alert("Por favor confirme os termos")
+            return;
+        }}
+    
     //Se todas as informações forem preenchidas
     form.submit()
+
+    //Validar se o email é verdadeiro
+    function validarEmail (email) {
+    var emailregex = new RegExp(
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+    ) 
+    if(emailregex.test(email)){
+        return true
+    }
+    return false;
+}
+    alert("Seu formulario foi enviado com sucesso!")    
 });
