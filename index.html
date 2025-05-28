@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Validação de Formulário</title>
-    <script src="assets/javascript/script.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
 </head>
 <body>
     
     <div class="container">
-        <form action="#">
+        <form action="#" id="form" novalidate>
             <h2 class="title-form">Contact Us</h3>
             <div class="container-infos">
 
@@ -54,11 +54,11 @@
 
                     <div class="textarea">
                         <label for="textarea" class="label-style">Message</label>
-                        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                        <textarea name="textarea" id="textarea" cols="30" rows="10" required></textarea>
                     </div>
 
                     <div class="confirm-terms">
-                        <input type="checkbox" name="confirm" id="confirm-term">
+                        <input type="checkbox" name="confirm" id="confirm-term" required>
                         <label for="confirm-term" id="term-confirmed">I consent to being contacted by the team</label>
                     </div>
 
